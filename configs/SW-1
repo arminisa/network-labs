@@ -1,0 +1,2 @@
+interface giabitEthernet0/0
+switchport mode access
