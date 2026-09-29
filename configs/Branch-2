@@ -1,0 +1,38 @@
+hostname Branch-2
+boot-start-marker
+boot-end-marker
+aqm-register-fnf
+no aaa new-model
+no ip icmp rate-limit unreachable
+no ip domain lookup
+ip cef
+no ipv6 cef
+multilink bundle-name authenticated
+redundancy
+ip tcp synwait-time 5
+interface Loopback0
+ ip address 4.4.4.4 255.255.255.255
+interface Ethernet0/0
+ no ip address
+ shutdown 
+interface GigabitEthernet0/0
+ ip address 10.0.2.2 255.255.255.252
+interface GigabitEthernet1/0
+ ip address 192.168.30.1 255.255.255.0
+interface GigabitEthernet2/0
+ no ip address
+ shutdown 
+interface GigabitEthernet3/0
+ no ip address
+ shutdown 
+interface GigabitEthernet4/0
+ no ip address
+ shutdown 
+interface GigabitEthernet5/0
+ no ip address
+ shutdown 
+router ospf 1
+ router-id 4.4.4.4
+ network 4.4.4.4 0.0.0.0 area 0
+ network 10.0.2.0 0.0.0.3 area 0
+ network 192.168.30.0 0.0.0.255 area 0
