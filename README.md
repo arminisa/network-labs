@@ -247,7 +247,7 @@ The deny counter should increment with every PC1→PC2 ping attempt.
 
 👤 Author
 
-[Your Name] — [LinkedIn/GitHub Link]
+**Armin Isa** — [github.com/arminisa](https://github.com/arminisa)
 
 ```
 ```
