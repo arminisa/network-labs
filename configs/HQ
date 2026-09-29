@@ -16,7 +16,7 @@ interface Ethernet0/0
  no ip address
  shutdown 
 interface GigabitEthernet0/0
- ip address 10.0.0.2 255.255.255.0
+ ip address 10.0.0.2 255.255.255.252
 interface GigabitEthernet1/0
  ip address 10.0.1.1 255.255.255.252
 interface GigabitEthernet2/0
@@ -31,6 +31,7 @@ interface GigabitEthernet5/0
  no ip address
  shutdown 
 router ospf 1
+router-id 2.2.2.2
  network 2.2.2.2 0.0.0.0 area 0
  network 10.0.0.0 0.0.0.3 area 0
  network 10.0.1.0 0.0.0.3 area 0
