@@ -1,0 +1,37 @@
+hostname HQ
+boot-start-marker
+boot-end-marker
+aqm-register-fnf
+no aaa new-model
+no ip icmp rate-limit unreachable
+no ip domain lookup
+ip cef
+no ipv6 cef
+multilink bundle-name authenticated
+redundancy
+ip tcp synwait-time 5
+interface Loopback0
+ ip address 2.2.2.2 255.255.255.255
+interface Ethernet0/0
+ no ip address
+ shutdown 
+interface GigabitEthernet0/0
+ ip address 10.0.0.2 255.255.255.0
+interface GigabitEthernet1/0
+ ip address 10.0.1.1 255.255.255.252
+interface GigabitEthernet2/0
+ ip address 10.0.2.1 255.255.255.252
+interface GigabitEthernet3/0
+ no ip address
+ shutdown 
+interface GigabitEthernet4/0
+ no ip address
+ shutdown 
+interface GigabitEthernet5/0
+ no ip address
+ shutdown 
+router ospf 1
+ network 2.2.2.2 0.0.0.0 area 0
+ network 10.0.0.0 0.0.0.3 area 0
+ network 10.0.1.0 0.0.0.3 area 0
+ network 10.0.2.0 0.0.0.3 area 0
