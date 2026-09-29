@@ -32,7 +32,7 @@ This project simulates a Hub-and-Spoke enterprise network architecture consistin
 
 ## 🏗️ Network Topology
 
-![Topology](assets/topology.png)
+![Topology] (Topology.png)
 
 ### Architecture
 - **R1 (Edge Router):** Connects to the simulated Internet (NAT Node).
