@@ -11,12 +11,12 @@ multilink bundle-name authenticated
 redundancy
 ip tcp synwait-time 5
 interface Loopback0
- ip address 1.1.1.1 255.255.255.252
+ ip address 1.1.1.1 255.255.255.255
 interface Ethernet0/0
  no ip address
  shutdown 
 interface GigabitEthernet0/0
- ip address 10.0.0.1 255.255.255.0
+ ip address 10.0.0.1 255.255.255.252
  ip nat inside
 interface GigabitEthernet1/0
  ip address dhcp
