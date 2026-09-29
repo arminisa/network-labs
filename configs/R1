@@ -42,7 +42,6 @@ ip forward-protocol nd
 no ip http server
 no ip http secure-server
 ip nat inside source list 1 interface GigabitEthernet1/0 overload
-ip route 0.0.0.0 0.0.0.0 192.168.122.1
 ip route 0.0.0.0 0.0.0.0 GigabitEthernet1/0 dhcp
 access-list 1 permit 10.0.0.0 0.0.0.3
 access-list 1 permit 192.168.20.0 0.0.0.255
