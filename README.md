@@ -209,11 +209,12 @@ Active translations from internal IPs to the public IP should be visible.
 
 4. ACL Testing
 
-Test Command Expected Result
-PC1 → PC2 ping 192.168.30.10 ❌ Timeout (Blocked by ACL)
-PC1 → Internet ping 8.8.8.8 ✅ Success (Permitted)
-PC2 → PC1 ping 192.168.20.10 ✅ Success (ACL is one-way)
-PC2 → Internet ping 8.8.8.8 ✅ Success
+| Test | Command | Expected Result |
+| :--- | :--- | :--- |
+| PC1 → PC2 | `ping 192.168.30.10` | ❌ Timeout (Blocked by ACL) |
+| PC1 → Internet | `ping 8.8.8.8` | ✅ Success (Permitted) |
+| PC2 → PC1 | `ping 192.168.20.10` | ✅ Success (ACL is one-way) |
+| PC2 → Internet | `ping 8.8.8.8` | ✅ Success |
 
 5. ACL Hit Counters
 
