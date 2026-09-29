@@ -1,15 +1,5 @@
 hostname Branch-2
-boot-start-marker
-boot-end-marker
-aqm-register-fnf
-no aaa new-model
-no ip icmp rate-limit unreachable
 no ip domain lookup
-ip cef
-no ipv6 cef
-multilink bundle-name authenticated
-redundancy
-ip tcp synwait-time 5
 interface Loopback0
  ip address 4.4.4.4 255.255.255.255
 interface Ethernet0/0
