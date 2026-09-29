@@ -1,8 +1,8 @@
 # CCNP Enterprise Network Project (GNS3)
 
-A comprehensive CCNP-level enterprise network project covering design, implementation, and verification in a GNS3 environment.
+A comprehensive CCNA-level enterprise network project covering design, implementation, and verification in a GNS3 environment.
 
-![CCNP](https://img.shields.io/badge/CCNP-200--301-blue)
+![CCNP](https://img.shields.io/badge/CCNA-200--301-blue)
 ![GNS3](https://img.shields.io/badge/GNS3-Latest-green)
 
 ## 📋 Table of Contents
