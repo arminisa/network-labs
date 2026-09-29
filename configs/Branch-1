@@ -1,0 +1,32 @@
+hostname Branch-1
+no ip domain lookup
+interface Loopback0
+ ip address 3.3.3.3 255.255.255.255
+interface Ethernet0/0
+ no ip address
+ shutdown 
+interface GigabitEthernet0/0
+ ip address 10.0.1.2 255.255.255.252
+interface GigabitEthernet1/0
+ ip address 192.168.20.1 255.255.255.0
+ ip access-group BLOCK_TO_BRANCH2 in
+interface GigabitEthernet2/0
+ no ip address
+ shutdown 
+interface GigabitEthernet3/0
+ no ip address
+ shutdown 
+interface GigabitEthernet4/0
+ no ip address
+ shutdown 
+interface GigabitEthernet5/0
+ no ip address
+ shutdown 
+router ospf 1
+ router-id 3.3.3.3
+ network 3.3.3.3 0.0.0.0 area 0
+ network 10.0.1.0 0.0.0.3 area 0
+ network 192.168.20.0 0.0.0.255 area 0
+ip access-list extended BLOCK_TO_BRANCH2
+ deny   ip 192.168.20.0 0.0.0.255 192.168.30.0 0.0.0.255
+ permit ip any any
