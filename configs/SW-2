@@ -1,0 +1,6 @@
+interface GigabitEthernet0/0
+switchport mode access
+!
+interface GigabitEthernet0/1
+sw mode access
+end
