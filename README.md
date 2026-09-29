@@ -1,8 +1,3 @@
-Here is the complete README.md content translated into professional English. You can copy and paste this directly into your GitHub repository.
-
----
-
-```markdown
 # CCNA Enterprise Network Project (GNS3)
 
 A comprehensive CCNA-level enterprise network project covering design, implementation, and verification in a GNS3 environment.
