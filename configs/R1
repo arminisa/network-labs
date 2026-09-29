@@ -1,0 +1,49 @@
+hostname R1
+boot-start-marker
+boot-end-marker
+aqm-register-fnf
+no aaa new-model
+no ip icmp rate-limit unreachable
+no ip domain lookup
+ip cef
+no ipv6 cef
+multilink bundle-name authenticated
+redundancy
+ip tcp synwait-time 5
+interface Loopback0
+ ip address 1.1.1.1 255.255.255.252
+interface Ethernet0/0
+ no ip address
+ shutdown 
+interface GigabitEthernet0/0
+ ip address 10.0.0.1 255.255.255.0
+ ip nat inside
+interface GigabitEthernet1/0
+ ip address dhcp
+ ip nat outside
+interface GigabitEthernet2/0
+ no ip address
+ shutdown 
+interface GigabitEthernet3/0
+ no ip address
+ shutdown 
+interface GigabitEthernet4/0
+ no ip address
+ shutdown 
+interface GigabitEthernet5/0
+ no ip address
+ shutdown 
+router ospf 1
+ router-id 1.1.1.1
+ network 1.1.1.1 0.0.0.0 area 0
+ network 10.0.0.0 0.0.0.3 area 0
+ default-information originate
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+ip nat inside source list 1 interface GigabitEthernet1/0 overload
+ip route 0.0.0.0 0.0.0.0 192.168.122.1
+ip route 0.0.0.0 0.0.0.0 GigabitEthernet1/0 dhcp
+access-list 1 permit 10.0.0.0 0.0.0.3
+access-list 1 permit 192.168.20.0 0.0.0.255
+access-list 1 permit 192.168.30.0 0.0.0.255
