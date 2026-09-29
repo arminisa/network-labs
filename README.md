@@ -1,4 +1,4 @@
-# CCNP Enterprise Network Project (GNS3)
+# CCNA Enterprise Network Project (GNS3)
 
 A comprehensive CCNA-level enterprise network project covering design, implementation, and verification in a GNS3 environment.
 
